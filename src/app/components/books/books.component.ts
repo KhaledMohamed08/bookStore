@@ -1,4 +1,5 @@
 import { Component, Output } from '@angular/core';
+import { BooksDataService } from 'src/app/services/books-data.service';
 import { Books } from 'src/app/viewModels/books';
 
 @Component({
@@ -8,19 +9,10 @@ import { Books } from 'src/app/viewModels/books';
 })
 export class BooksComponent {
   @Output() books:Books[] = []
+  book:Books[]=[]
 
-  constructor(){
-    this.books = [
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-    ]
+
+  constructor(private bookser:BooksDataService){
+    this.book = bookser.books
   }
 }

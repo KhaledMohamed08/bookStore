@@ -11,13 +11,13 @@ import { Books } from 'src/app/viewModels/books';
 export class BookPageComponent implements OnInit{
   bookID!:any
   book:Books | undefined
-  constructor(private book:BooksDataService, private activateRoute:ActivatedRoute){
+  constructor(private bookser:BooksDataService, private activateRoute:ActivatedRoute){
     
   }
   ngOnInit(): void {
     this.bookID = this.activateRoute.snapshot.paramMap.get('id');
 
-    //  this.product = this.servproduct.getproductbyid(this.productId);
+     this.book = this.bookser.getBookByID(this.bookID);
 
   }
 }

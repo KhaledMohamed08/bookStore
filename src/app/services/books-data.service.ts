@@ -9,8 +9,8 @@ export class BooksDataService {
   constructor() { 
     this.books = [
       {id:1, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:2, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
-      {id:3, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
+      {id:2, name:"Abdelrahman", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
+      {id:3, name:"mairyna ", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
       {id:4, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
       {id:5, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
       {id:6, name:"Book Name", title:"this contain a little description of the book", writer:"Writer Name", img:"https://picsum.photos/400/300", price:50},
