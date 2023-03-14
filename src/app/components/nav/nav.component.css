@@ -30,20 +30,4 @@ nav{
     border-top: 2px solid #fff;
     margin-top: 0.5em;
   }
-  .jumbotron{
-    background-image: url('../../../assets/books-gdb9ee4c17_1280.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-  }
-  .jumbotron .input-group{
-    height: 60px;
-  }
-  .jumbotron .input-group button{
-    height: 60px;
-    width: 120px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    color: white;
-    background-color: #595B83;
-  }
+  

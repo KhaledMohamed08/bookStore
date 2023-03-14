@@ -8,11 +8,8 @@ import { Books } from 'src/app/viewModels/books';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent {
-  @Output() books:Books[] = []
   book:Books[]=[]
-
-
-  constructor(private bookser:BooksDataService){
-    this.book = bookser.books
+  constructor(booksData:BooksDataService){
+    this.book = booksData.books
   }
 }

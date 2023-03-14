@@ -10,6 +10,7 @@ import { BooksComponent } from './components/books/books.component';
 import { LoginComponent } from './components/login/login.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import { RegisterComponent } from './components/register/register.component';
+import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterComponent } from './components/register/register.component';
     BooksComponent,
     LoginComponent,
     BookPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,
