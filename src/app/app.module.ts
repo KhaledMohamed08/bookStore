@@ -10,6 +10,8 @@ import { BooksComponent } from './components/books/books.component';
 import { LoginComponent } from './components/login/login.component';
 import { BookPageComponent } from './components/book-page/book-page.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HistoryComponent } from './components/history/history.component';
+import { FormsModule } from '@angular/forms';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 
 @NgModule({
@@ -22,11 +24,13 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
     LoginComponent,
     BookPageComponent,
     RegisterComponent,
+    HistoryComponent,
     JumbotronComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
