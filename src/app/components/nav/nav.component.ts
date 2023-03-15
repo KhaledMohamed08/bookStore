@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrdersService } from 'src/app/services/orders.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-  numOfOrders:number
-  constructor(){
-    this.numOfOrders = 0
+  cartNumber!:number
+  constructor(private order:OrdersService){
+    this.cartNumber = order.cartNumber
   }
   
 }

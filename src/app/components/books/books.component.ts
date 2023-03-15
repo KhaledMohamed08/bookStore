@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, OnChanges, OnInit, Output } from '@angular/core';
 import { BooksDataService } from 'src/app/services/books-data.service';
 import { Books } from 'src/app/viewModels/books';
 
@@ -7,9 +7,11 @@ import { Books } from 'src/app/viewModels/books';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
-export class BooksComponent {
+export class BooksComponent{
   book:Books[]=[]
+  cartNum!:number
   constructor(booksData:BooksDataService){
     this.book = booksData.books
   }
+ 
 }

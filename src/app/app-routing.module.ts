@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
   {path:'home', component:BodyComponent},
+  {path:'', component:BodyComponent},
   {path:'books/:id', component:BookPageComponent},
   {path:'History', component:HistoryComponent},
 ];

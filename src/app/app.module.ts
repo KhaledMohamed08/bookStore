@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HistoryComponent } from './components/history/history.component';
 import { FormsModule } from '@angular/forms';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
+import { CatigoryListComponent } from './components/catigory-list/catigory-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
     BookPageComponent,
     RegisterComponent,
     HistoryComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    CatigoryListComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class OrdersService {
+  cartNumber!:number
 
-  constructor() { }
+  constructor() { 
+    this.cartNumber = 0;
+   }
+   
 }
