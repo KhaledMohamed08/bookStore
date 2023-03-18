@@ -8,7 +8,7 @@ import { OrdersService } from 'src/app/services/orders.service';
 })
 export class NavComponent {
   cartNumber!:number
-  constructor(private order:OrdersService){
+  constructor(public order:OrdersService){
     this.cartNumber = order.cartNumber
   }
   

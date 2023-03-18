@@ -14,6 +14,11 @@ import { HistoryComponent } from './components/history/history.component';
 import { FormsModule } from '@angular/forms';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { CatigoryListComponent } from './components/catigory-list/catigory-list.component';
+import { CartComponent } from './components/cart/cart.component';
+import { UserDataComponent } from './components/user-data/user-data.component';
+import { MyBooksComponent } from './components/my-books/my-books.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { CatigoryListComponent } from './components/catigory-list/catigory-list.
     RegisterComponent,
     HistoryComponent,
     JumbotronComponent,
-    CatigoryListComponent
+    CatigoryListComponent,
+    CartComponent,
+    UserDataComponent,
+    MyBooksComponent,
+    AddBookComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

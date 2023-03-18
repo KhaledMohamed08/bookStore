@@ -9,5 +9,7 @@ export class OrdersService {
   constructor() { 
     this.cartNumber = 0;
    }
-   
+   addOrder(){
+    this.cartNumber = this.cartNumber + 1
+   }
 }

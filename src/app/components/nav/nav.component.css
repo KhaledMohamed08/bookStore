@@ -30,4 +30,9 @@ nav{
     border-top: 2px solid #fff;
     margin-top: 0.5em;
   }
+  .active{
+    background-color: white;
+    color: #595B83 !important;
+    border-radius: 3px;
+  }
   

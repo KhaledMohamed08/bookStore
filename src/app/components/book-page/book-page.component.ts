@@ -12,7 +12,7 @@ import { OrdersService } from 'src/app/services/orders.service';
 export class BookPageComponent implements OnInit {
   bookID!: any
   book: any
-  constructor(private booksData: BooksDataService, private activateRoute: ActivatedRoute, private location:Location, private orders:OrdersService) {
+  constructor(private booksData: BooksDataService, private activateRoute: ActivatedRoute, private location:Location, public order:OrdersService) {
 
   }
   ngOnInit(): void {
@@ -22,5 +22,8 @@ export class BookPageComponent implements OnInit {
   }
   back(){
     this.location.back();
+  }
+  x(){
+    this.order.addOrder()
   }
 }
