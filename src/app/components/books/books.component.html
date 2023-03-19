@@ -1,18 +1,18 @@
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-3 mt-5 card-container" *ngFor="let item of book">
+        <div class="col-md-3 mt-5 card-container" *ngFor="let item of allBooks">
             <div class="card-sl" [routerLink]="['/books',item.id]">
                 <div class="card-image">
-                    <img [src]="item.img" alt="book cover" />
+                    <img [src]="item.image" alt="book cover" />
                 </div>
                 <div class="card-heading">
                     {{item.name}}
                 </div>
                 <div class="card-subHeading">
-                    {{item.writer}}
+                    {{item.writer_id}}
                 </div>
                 <div class="card-text">
-                    {{item.title}}
+                    {{item.description}}
                 </div>
                 <div class="card-text">
                     {{item.price | currency:"EGP"}}
