@@ -13,7 +13,7 @@ export class ApiBooksService {
   getAllBooks():Observable<apiBooks>{
     return this._httpClient.get<apiBooks>("http://localhost:8000/books")
   }
-  getBookByID(id:number):Observable<Books>{
-    return this._httpClient.get<Books>(`http://localhost:8000/books/${id}`)
+  getBookByID(id:number):Observable<apiBooks>{
+    return this._httpClient.get<apiBooks>(`http://localhost:8000/books/${id}`)
   }
 }

@@ -22,8 +22,8 @@ export class BookPageComponent implements OnInit {
     this.bookID = this.activateRoute.snapshot.paramMap.get('id');
     // this.book = this.booksData.getBookByID(this.bookID);
     this.sub =  this.apiBooks.getBookByID(this.bookID).subscribe({
-      next:(res)=>{
-        this.book = res
+      next:(_res)=>{
+        
         
       }
     })

@@ -3,7 +3,7 @@
         <div class="col-md-3 mt-5 card-container" *ngFor="let item of allBooks">
             <div class="card-sl" [routerLink]="['/books',item.id]">
                 <div class="card-image">
-                    <img [src]="item.image" alt="book cover" />
+                    <img src="https://fakeimg.pl/250x100/" alt="book cover" />
                 </div>
                 <div class="card-heading">
                     {{item.name}}
