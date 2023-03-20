@@ -29,7 +29,7 @@ writer:writer[]=[]
     }
   savebook(){
 
-      this.bookserv.saveNewBook(this.book).subscribe({
+      this.bookserv.saveNewBook(this.books).subscribe({
         next:(res)=>{
           this.router.navigate(['/home'])
         }
