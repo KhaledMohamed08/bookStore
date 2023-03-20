@@ -84,11 +84,11 @@
   </div>
   <div class="mb-3">
       <label for="" class="form-label">Category</label>
-      <select name="prdCategory" [(ngModel)]="books.category_id" class="form-select form-select-lg" name="" id="">
+      <select name="prdCategory" [(ngModel)]="books.category_id" class="form-select form-select-lg">
             <option [value]="categories.category_id" *ngFor="let categories of categories" > {{categories.name}}</option>
        </select>
    </div>
-   <div class="mb-3">
+   <!-- <div class="mb-3">
     <label for="" class="form-label">writer name</label>
     <select name="prdCategory" [(ngModel)]="books.writer_id" class="form-select form-select-lg" name="" id="">
           <option [value]="item.writer_id" *ngFor="let item of writer" > {{item.name}}</option>
@@ -100,7 +100,7 @@
      </div>
    </div>
 
-  </div>
+  </div> -->
         <button type="submit" class="btn btn-dark btn-lg btn-block mb-1 w-25">Add Book</button>
 
    </form>

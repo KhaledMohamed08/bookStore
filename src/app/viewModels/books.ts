@@ -20,7 +20,9 @@ export interface apiBooks{
 export interface category{
   category_id:number,
   name:string
-
+}
+export interface cat{
+  data:Array<category>
 }
 
 export interface writer{

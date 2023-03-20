@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiBooksService } from 'src/app/services/api-books.service';
 import { Router } from '@angular/router';
-import { apiBooks, Books, category, writer } from 'src/app/viewModels/books';
+import { apiBooks, Books, cat, category, writer } from 'src/app/viewModels/books';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { CategoryService } from 'src/app/services/category.service';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent implements OnInit {
-  categories:category[]=[];
+  categories:any;
 writer:writer[]=[]
   book!: apiBooks
   books:Books={} as Books
@@ -22,7 +22,7 @@ writer:writer[]=[]
     this.categorysevice.getallcategory().subscribe({
       next:(res)=>{
         console.log(res)
-        this.categories=res
+        this.categories=res.data
 
       }
     })

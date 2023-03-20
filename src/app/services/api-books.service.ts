@@ -16,7 +16,7 @@ export class ApiBooksService {
   getBookByID(id:number):Observable<Books>{
     return this._httpClient.get<Books>(`http://localhost:8000/books/${id}`)
   }
-  saveNewBook(prd: apiBooks): Observable<apiBooks> {
+  saveNewBook(prd:apiBooks): Observable<apiBooks> {
     return this._httpClient.post<apiBooks>(
       "http://localhost:8000/books",
      prd,
