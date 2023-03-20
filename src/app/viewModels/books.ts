@@ -9,10 +9,23 @@ export interface Books {
     category_id:number,
     created_at:Date,
     updated_at:Date
-    
+
 }
 
 export interface apiBooks{
     data:Array<Books>
-    
+
 }
+
+export interface category{
+  category_id:number,
+  name:string
+
+}
+
+export interface writer{
+  writer_id:number,
+  name:string
+
+}
+

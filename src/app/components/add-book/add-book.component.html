@@ -1,49 +1,106 @@
-<div class="container mt-5">
-    <form>
-        <!-- 2 column grid layout with text inputs for the first and last names -->
-        <div class="row mb-4">
+    <!-- <form  (ngSubmit)="savebook()"> -->
+      <!-- <div class="container mt-5"> -->
+
+       <!-- <form #myForm="ngForm" autocomplete="off" (ngSubmit)="savebook()">
+
+      <div class="container mt-5"> -->
+
+         <!-- 2 column grid layout with text inputs for the first and last names  -->
+         <!-- <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
                 <label class="form-label" for="bookName">Book Name</label>
-              <input type="text" id="bookName" class="form-control" />
+              <input type="text"  [(ngModel)]="books.name"  id="bookName" class="form-control" />
             </div>
-          </div>
-          <div class="col">
-            <div class="form-outline">
-                <label class="form-label" for="Writer Name">Writer Name</label>
-              <input type="text" id="Writer Name" class="form-control" />
-            </div>
-          </div>
-        </div>
-        <div class="row mb-4">
+          </div> -->
+
+           <!-- <div class="col">
+        <div class="mb-3">
+          <label for="" class="form-label">writer name</label>
+          <select name="prdCategory" [(ngModel)]="books.writer_id" class="form-select form-select-lg" name="" id=""> -->
+                <!-- <option [value]="item.writer_id" *ngFor="let item of writer" > {{item.name}}</option> -->
+           <!-- </select>
+       </div>
+      </div> -->
+         <!-- <div class="row mb-4">
             <div class="col">
                 <div class="form-outline mb-4">
                     <label class="form-label" for="bookCover">Book Cover</label>
-                  <input type="file" id="bookCover" class="form-control" />
-                </div>    
-            </div>
-            <div class="col">
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="price">Price</label>
-                  <input type="number" id="price" class="form-control" />
+                  <input type="file" id="bookCover" [(ngModel)]="books.image" class="form-control" />
                 </div>
             </div>
-        </div>
-        <div class="form-outline mb-4">
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                <option selected disabled>Choose Book Category</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-        </div>
-      
+             <div class="col">
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="price">Price</label>
+                  <input type="number" id="price" [(ngModel)]="books.price"   class="form-control" />
+                </div>
+            </div>
+  -->
+        <!-- <div class="mb-4">
+          <label for="" class="form-label">Category</label>
+          <select name="prdCategory" [(ngModel)]="books.category_id" class="form-select form-select-lg" name="" id="">
+               <option [value]="category.category_id" *ngFor="let category of categories" > {{category.name}}</option>
+           </select>
+       </div> -->
+
         <!-- Message input -->
-        <div class="form-outline mb-4">
+
+        <!-- <div class="col">
+         <div class="form-outline mb-4">
             <label class="form-label" for="form6Example7">Book Description</label>
-          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+          <textarea class="form-control" [(ngModel)]="books.description"   id="form6Example7" rows="4"></textarea>
         </div>
-        <!-- Submit button -->
+      </div>
+
+         <!-- Submit button -->
+         <!-- <button type="submit" class="btn btn-dark btn-lg btn-block mb-1 w-10">Add Book</button> -->
+
+
+<!-- </div>  -->
+
+<form #myForm="ngForm" autocomplete="off" (ngSubmit)="savebook()">
+  <div class="form-group">
+      <label for="exampleInputEmail1"> Book Name :</label>
+      <input #prdName="ngModel"  [(ngModel)]="books.name" required  pattern="^[a-zA-Z]{4,15}$"
+
+      type="text"
+          class="form-control" id="exampleInputEmail1" name="prdName" aria-describedby="emailHelp"
+          placeholder="Enter name">
+
+       <div [hidden]="prdName.valid || prdName.pristine" class="text-danger">
+          <p [hidden]="!prdName.errors?.['required']">Product Name Required</p>
+          <p [hidden]="!prdName.errors?.['pattern']">Invalid Product Name</p>
+      </div>
+   </div>
+  <div class="form-group">
+      <label for="exampleInputPassword1">Price</label>
+      <input name="prdPrice" [(ngModel)]="books.price" type="number" class="form-control"
+          id="exampleInputPassword1">
+  </div>
+
+  <div class="form-group">
+      <label for="exampleInputPassword1">Image</label>
+      <input name="prdImage" [(ngModel)]="books.image" type="file" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+      <label for="" class="form-label">Category</label>
+      <select name="prdCategory" [(ngModel)]="books.category_id" class="form-select form-select-lg" name="" id="">
+            <option [value]="categories.category_id" *ngFor="let categories of categories" > {{categories.name}}</option>
+       </select>
+   </div>
+   <div class="mb-3">
+    <label for="" class="form-label">writer name</label>
+    <select name="prdCategory" [(ngModel)]="books.writer_id" class="form-select form-select-lg" name="" id="">
+          <option [value]="item.writer_id" *ngFor="let item of writer" > {{item.name}}</option>
+      </select>
+     <div class="col">
+      <div class="form-outline mb-4">
+         <label class="form-label" for="form6Example7">Book Description</label>
+       <textarea class="form-control" [(ngModel)]="books.description"   id="form6Example7" rows="4"></textarea>
+     </div>
+   </div>
+
+  </div>
         <button type="submit" class="btn btn-dark btn-lg btn-block mb-1 w-25">Add Book</button>
-      </form>
-</div>
+
+   </form>

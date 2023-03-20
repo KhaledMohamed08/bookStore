@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable,retry } from 'rxjs';
 import { apiBooks, Books} from '../viewModels/books';
 
 @Injectable({
@@ -15,5 +15,16 @@ export class ApiBooksService {
   }
   getBookByID(id:number):Observable<Books>{
     return this._httpClient.get<Books>(`http://localhost:8000/books/${id}`)
+  }
+  saveNewBook(prd: apiBooks): Observable<apiBooks> {
+    return this._httpClient.post<apiBooks>(
+      "http://localhost:8000/books",
+     prd,
+      {
+        headers: new HttpHeaders({
+          accept: 'application/json',
+        }),
+      }
+    ).pipe(retry(2));
   }
 }
